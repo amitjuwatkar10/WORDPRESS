@@ -1,0 +1,20 @@
+Make SSL Secure
+
+Make your admin Secure
+define('FORCE_SSL_ADMIN', true);
+
+------------------------------------
+
+Go to Settings -> General 
+Change the path to https 
+
+Address Url + Site Url
+
+------------------------------------
+
+Change .htaccess file *
+
+# Force HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
